@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="img/favicon.png">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--Меню-->
+	<div class="container">
+	 <nav class="navbar navbar-expand-lg header ">
+		  <a class="navbar-brand" href="index.html">BARUNKI.</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon">
+		  	<img src="img/navicon.png" alt="">
+		  </span>
+		  </button>
+		  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-4">
+			      <li class="nav-item">
+			        <a class="nav-link" data-value="Home" href="index.html">Home</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link " data-value="blog" href="blog.html">Blog</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link " data-value="portfolio" href="portfolio.html">Portfolio</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link " data-value="contact" href="contact_form.html">Contact</a>
+			      </li>
+			      <li class="nav-item">
+			      	<button class="btn  btn-md" data-toggle="modal" data-target="#exampleModal">Sign In</button>
+			        <!--<a class="nav-link " data-value="sign_in" href="sign.html">Sign In</a>-->
+				    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				    <div class="modal-dialog" role="document">
+				        <div class="modal-content">
+				            <div class="modal-header">
+				            	
+				                <h5 class="modal-title" id="exampleModalLabel">Авторизация</h5>
+				                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				                    <span aria-hidden="true">&times;</span>
+				                </button>
+				            </div>
+				            <div class="modal-body">
+				                <form id="contactForm" action="handler.php" method="post">
+								   <!-- <div class="form-group">
+								        <label for="name">Ваше имя:</label>
+								        <input id="name" class="form-control" name="name" required type="text" placeholder="Иванов Иван Иванович">
+								    </div>-->
+								    <div class="form-group">
+								        <label for="email">E-mail:</label>
+								        <input id="email" class="form-control" name="email" required type="text" placeholder="ivanov@email.com">
+								    </div>
+								    <div class="form-group">
+										 <label for="exampleInputPassword1">Password</label>
+										 <input type="password" class="form-control" id="exampleInputPassword1">
+									</div>
+								    <!--<div class="form-group">
+								        <label for="message">Текст сообщения:</label>
+								        <textarea id="message" class="form-control" required name="message" rows="4"></textarea>
+								    </div>
+								    <div class="form-group form-check">
+								        <input id="check" class="form-check-input" checked type="checkbox">
+								        <label class="form-check-label" for="check">Я добровольно отправляю свои данные</label>
+								    </div>-->
+								    <button id="button" class="btn btn-success" type="submit">Отправить</button>
+								    <div class="result">
+								        <span id="answer"></span>
+								        <span id="loader" style="display:none"><img src="images/loader.gif" alt=""></span>
+								    </div>
+								</form>
+						     </div>
+						 </div>
+					 </div>
+				</div>
+			      </li>
+			    </ul>
+		  </div>
+	</nav>
+</div>
+<!--начало block_line-->
+<div class="blog_line">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2  col-sm-4">
+					<p class="blog">/Contact</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--конец block_line-->
+<!--Конец Меню-->
+<div class="contact">
+	<div class="container">
+	<h1>Contact form</h1>
+	<p>Take information about you, and input your question</p>
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-12 ">		
+		<form method="POST" action="/action_page.php">
+		<div class="form-group">
+    		<label for="exampleInputName2">Name</label>
+    		<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+  		</div>
+		<fieldset class="form-group">
+    		<label for="exampleInputEmail1">Email address</label>
+    		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+    		<small class="text-muted">We'll never share your email with anyone else.</small>
+  		</fieldset>
+		<fieldset class="form-group">
+    		<label for="exampleTextarea">Message</label>
+    		<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+  		</fieldset>
+  		<div class="form-group form-check">
+			<input id="check" class="form-check-input" checked type="checkbox">
+			<label class="form-check-label" for="check">Я добровольно отправляю свои данные</label>
+		</div>
+		<button type="submit" class="btn ots">Submit</button>
+	</form>
+	</div>
+	</div>
+	</div>
+</div>
+<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-6 col-lg-10">
+					<p>&copy;Dekteva Marina&Novikova Tatyana Copyright</p>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-2">
+					<ul class="navbar-nav mr-4 ">
+						<li class="nav-item"><a href="#" class="con">Policy Privacy</a></li>
+						<li class="nav-item"><a href="#" class="con">FAQ</a></li>
+						<li class="nav-item"><a href="#" class="con">News</a></li>
+						<li class="nav-item"><a href="#" class="con">Contact</a></li>
+					</ul>
+				</div>	
+			
+			</div>
+		</div>
+</footer>
+	<!-- Инициализация и Ajax-запрос -->
+<script src="js/main.js"></script>
+</body>
+</html>
